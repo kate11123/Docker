@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+  frontend:
+    image: kate11123/frontend
+    container_name: ${CONTAINER_NAME_FRONTEND}
+    ports:
+     - "${SERVER_PORT_FRONTEND}:${SERVER_PORT_FRONTEND}"
+  backend:
+    image: kate11123/backend
+    container_name: ${CONTAINER_NAME_BACKEND}
+    ports:
+     - "${SERVER_PORT_BACKEND}:${SERVER_PORT_FRONTEND}"
